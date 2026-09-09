@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'TWD', { apiKey: 'art_live_...' });
 {
   bank: 'cbc',
   name: 'Central Bank of the Republic of China (Taiwan)',
-  rate_date: '2026-08-20',   // Central Bank of the Republic of China (Taiwan)'s own publication date
+  rate_date: '2026-09-09',   // Central Bank of the Republic of China (Taiwan)'s own publication date
   source: 'USD',
   target: 'TWD',
-  rate: 31.925,
+  rate: 31.505,
   rate_type: 'close',
   derived: false,
   method: 'published',
@@ -98,9 +98,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbc',
   name: 'Central Bank of the Republic of China (Taiwan)',
-  rate_date: '2026-08-20',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "TWD", "type": "close", "value": 31.925 },
+    { "base": "USD", "quote": "TWD", "type": "close", "value": 31.505 },
     // … the rest of the published table (1 currency vs TWD)
   ],
   disclaimer: '…'
@@ -140,7 +140,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'taiwan-central-bank-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'TWD', from: '2026-01-01', to: '2026-08-20' },
+  { source: 'USD', target: 'TWD', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -153,11 +153,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'TWD',
   from: '2026-01-01',
-  to: '2026-08-20',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-20', rate: 31.925, rate_type: 'close', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 31.505, rate_type: 'close', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -235,6 +235,14 @@ getRate('USD', 'TWD', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2008 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/cbc.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/cbc/latest.json`
 
 ## 🔗 Links
 
