@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'TWD', { apiKey: 'art_live_...' });
 {
   bank: 'cbc',
   name: 'Central Bank of the Republic of China (Taiwan)',
-  rate_date: '2026-09-24',   // Central Bank of the Republic of China (Taiwan)'s own publication date
+  rate_date: '2026-10-06',   // Central Bank of the Republic of China (Taiwan)'s own publication date
   source: 'USD',
   target: 'TWD',
-  rate: 31.78,
+  rate: 31.781,
   rate_type: 'close',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbc',
   name: 'Central Bank of the Republic of China (Taiwan)',
-  rate_date: '2026-09-24',
+  rate_date: '2026-10-06',
   rates: [
-    { "base": "USD", "quote": "TWD", "type": "close", "value": 31.78 },
+    { "base": "USD", "quote": "TWD", "type": "close", "value": 31.781 },
     // … the rest of the published table (1 currency vs TWD)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'taiwan-central-bank-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'TWD', from: '2026-01-01', to: '2026-09-24' },
+  { source: 'USD', target: 'TWD', from: '2026-01-01', to: '2026-10-06' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'TWD',
   from: '2026-01-01',
-  to: '2026-09-24',
+  to: '2026-10-06',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-24', rate: 31.78, rate_type: 'close', derived: false, method: 'published' },
+    { date: '2026-10-06', rate: 31.781, rate_type: 'close', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
