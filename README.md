@@ -40,11 +40,11 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 Today's full Central Bank of the Republic of China (Taiwan) table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-08** by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-10-08.
+Published **2026-10-12** by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-10-12.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | TWD | close | 31.875 |
+| USD | TWD | close | 31.895 |
 
 Source: [Official rates published by CBC, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbc/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
