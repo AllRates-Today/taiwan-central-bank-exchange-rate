@@ -47,11 +47,11 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-28 by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-10-28.</summary>
+<summary>Table as text: published 2026-10-29 by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-10-29.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | TWD | close | 32.418 |
+| USD | TWD | close | 32.492 |
 
 </details>
 
@@ -216,6 +216,7 @@ Taiwan's central bank publishes exactly one exchange-rate series of its own: the
 
 - Publisher's own page: [NTD/USD closing rate](https://www.cbc.gov.tw/en/lp-645-2.html) · [www.cbc.gov.tw/en](https://www.cbc.gov.tw/en/)
 - Publication: every business day; the exact schedule, freshness status and any current delay are on the [Central Bank of the Republic of China (Taiwan) rates page](https://allratestoday.com/central-bank-rates-api/cbc/)
+- In the API: usually by **09:15 UTC** (measured over the last 9 publications). Schedule a sync at or after that time and retry hourly until `rate_date` moves; every response carries the same figure as `available_by_utc` — see [when to poll](https://allratestoday.com/docs/#when-to-poll)
 - Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 🧭 Reading the numbers
