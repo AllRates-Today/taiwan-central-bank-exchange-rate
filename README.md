@@ -304,6 +304,7 @@ Need the whole archive rather than an API call? The same published tables are mi
 
 ## 🔗 Links
 
+- **Website:** [allratestoday.com](https://allratestoday.com)
 - [Central Bank of the Republic of China (Taiwan) rates page](https://allratestoday.com/central-bank-rates-api/cbc/) — live table, publication cadence, FAQ
 - [All central bank sources](https://allratestoday.com/central-bank-rates-api/)
 - [Package docs on the site](https://allratestoday.com/docs/sdk/taiwan-central-bank-exchange-rate/) · [ERP integration guides](https://allratestoday.com/docs/integrations/)
