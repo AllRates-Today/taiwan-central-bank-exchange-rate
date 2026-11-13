@@ -32,11 +32,11 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-12 by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-11-12.</summary>
+<summary>Table as text: published 2026-11-13 by Central Bank of the Republic of China (Taiwan) — 1 rate. Updated 2026-11-13.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | TWD | close | 32.889 |
+| USD | TWD | close | 32.838 |
 
 </details>
 
